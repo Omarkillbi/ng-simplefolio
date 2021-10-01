@@ -1,9 +1,9 @@
-<section>
+<section >
   <div class="text">
-    <h1>Hi, my name is <span>Dhia Eddine Trabelsi</span>
+    <h1 [@heroAnimation]="titleState" (@heroAnimation.done)="animationDone($event)"  >Hi, my name is <span>Dhia Eddine Trabelsi</span>
       <br>
         I'm a Full Stack Web developer
     </h1>
-    <a href>Know more</a>
+    <a [@heroAnimation]="buttonState" href>Know more</a>
   </div>
 </section>

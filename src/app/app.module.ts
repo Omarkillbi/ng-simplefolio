@@ -8,6 +8,7 @@ import { AboutMeSectionComponent } from './sections/about-me-section/about-me-se
 import { ProjectsSectionComponent } from './sections/projects-section/projects-section.component';
 import { ContactSectionComponent } from './sections/contact-section/contact-section.component';
 import { OtherLinksSectionComponent } from './sections/other-links-section/other-links-section.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { OtherLinksSectionComponent } from './sections/other-links-section/other
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
