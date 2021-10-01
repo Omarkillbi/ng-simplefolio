@@ -1,0 +1,25 @@
+section {
+  height: 100vh;
+  display: flex;
+  padding-left: 5%;
+  font-size: 2.5rem;
+  align-items: center;
+  .text {
+    height: fit-content;
+    h1 {
+      margin: 10px 0;
+
+      span {
+        color: #8b43ff;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: #8b43ff;
+      border: #8b43ff 2px solid;
+      padding: 5px 10px;
+      font-size: 1.6rem;
+
+    }
+  }
+}
