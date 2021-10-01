@@ -1,0 +1,21 @@
+@media screen and (max-width: 1199px) {
+  section {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  section {
+    padding-left: 0;
+    font-size: 1.4rem;
+    text-align: center;
+    justify-content: center;
+    .text {
+      width: 92%;
+      a {
+        margin: auto;
+      }
+    }
+  }
+
+}

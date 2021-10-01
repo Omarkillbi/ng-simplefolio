@@ -5,7 +5,7 @@ import { AnimationEvent } from "@angular/animations";
 @Component({
   selector: 'app-hero-section',
   templateUrl: './hero-section.component.html',
-  styleUrls: ['./hero-section.component.scss'],
+  styleUrls: ['./hero-section.component.scss', 'hero-section.component.query.scss'],
   animations: [
     trigger('heroAnimation', [
       state("In", style({
