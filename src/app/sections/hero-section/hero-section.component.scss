@@ -8,7 +8,6 @@ section {
     height: fit-content;
     h1 {
       margin: 10px 0;
-
       span {
         color: #8b43ff;
       }
@@ -17,9 +16,20 @@ section {
       text-decoration: none;
       color: #8b43ff;
       border: #8b43ff 2px solid;
-      padding: 5px 10px;
-      font-size: 1.6rem;
+      padding: 5px 30px;
+      font-size: 1.5rem;
 
+      transition: all 0.3s ease-out;
+      background: linear-gradient(to right,#8b43ff 0% , #6a25da 50%, white 50%) right bottom;
+      background-size: 200% 100%;
+      font-weight: 700;
+      &:hover {
+        background-position: left bottom;
+        color: #FFFFFF;
+      }
     }
   }
 }
+
+
+
