@@ -26,16 +26,47 @@
 
 @media screen and (max-width: 768px) {
   section {
+    height: 74vh;
     .container {
+      width: 100%;
+      margin-top: 10px;
+      h2 {
+        font-size: 2rem;
+      }
       .data {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        .pic {
+          text-align: center;
+          margin-right: 0px;
+          width: 100%;
+
+          img {
+            width: 100%;
+            max-width: 280px;
+          }
+        }
 
         .text {
+          font-size: 17px;
+
           margin-left: 0px;
-          margin-top: 30px;
-          width: 45%;
+          margin-top: 10px;
+          max-width: 300px;
+          width: 100%;
+          p {
+            text-align: center;
+            width: 100%;
+          }
+          a {
+            margin: 5px auto;
+          }
         }
       }
     }
   }
 }
+
+
