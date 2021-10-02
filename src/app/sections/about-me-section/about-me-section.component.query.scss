@@ -1,0 +1,41 @@
+@media screen and (max-width: 1199px) {
+  section {
+    height: 62vh;
+    clip-path: none;
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  section {
+    .container {
+      .data {
+        justify-content: center;
+
+        .text {
+          margin-left: 0px;
+          margin-top: 30px;
+          width: 45%;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  section {
+    .container {
+      .data {
+        justify-content: center;
+
+        .text {
+          margin-left: 0px;
+          margin-top: 30px;
+          width: 45%;
+        }
+      }
+    }
+  }
+}

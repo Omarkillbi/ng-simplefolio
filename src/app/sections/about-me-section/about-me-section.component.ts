@@ -4,7 +4,7 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
 @Component({
   selector: 'app-about-me-section',
   templateUrl: './about-me-section.component.html',
-  styleUrls: ['./about-me-section.component.scss'],
+  styleUrls: ['./about-me-section.component.scss', 'about-me-section.component.query.scss'],
   animations: [
     trigger('pictureAnimation', [
       state("standBy", style({
