@@ -1,0 +1,33 @@
+section {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 70px;
+  }
+  .project {
+    display: flex;
+    max-width: 1140px;
+    margin-bottom: 40px;
+
+
+    .info {
+      width: 30%;
+
+    }
+
+    .img-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 70%;
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
