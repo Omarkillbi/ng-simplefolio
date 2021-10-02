@@ -16,7 +16,7 @@ import { AnimationEvent } from "@angular/animations";
         'opacity': '0',
         'transform': 'translateX(-5%)'
       })),
-      transition('standBy => In', animate(450))
+      transition('standBy => In', animate("900ms 0ms cubic-bezier(0.5, 0, 0, 1)"))
     ])
   ]
 })

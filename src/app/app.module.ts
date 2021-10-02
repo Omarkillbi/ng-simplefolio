@@ -9,6 +9,7 @@ import { ProjectsSectionComponent } from './sections/projects-section/projects-s
 import { ContactSectionComponent } from './sections/contact-section/contact-section.component';
 import { OtherLinksSectionComponent } from './sections/other-links-section/other-links-section.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { AnimatedButtonComponent } from './shared-components/animated-button/animated-button.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     AboutMeSectionComponent,
     ProjectsSectionComponent,
     ContactSectionComponent,
-    OtherLinksSectionComponent
+    OtherLinksSectionComponent,
+    AnimatedButtonComponent
   ],
   imports: [
     BrowserModule,

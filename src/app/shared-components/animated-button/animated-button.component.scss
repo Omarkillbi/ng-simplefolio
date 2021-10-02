@@ -1,0 +1,18 @@
+a {
+  border: #8b43ff 2px solid;
+  color: #8b43ff;
+  display: block;
+  font-size: 1.5rem;
+  padding: 6px 30px;
+  text-decoration: none;
+  width: fit-content;
+
+  transition: all 0.3s ease-out;
+  background: linear-gradient(to right,#8b43ff 0% , #6a25da 50%, white 50%) right bottom;
+  background-size: 200% 100%;
+  font-weight: 700;
+  &:hover {
+    background-position: left bottom;
+    color: #FFFFFF;
+  }
+}

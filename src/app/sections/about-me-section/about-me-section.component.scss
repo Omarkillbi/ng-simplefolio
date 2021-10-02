@@ -1,63 +1,69 @@
 section {
-  background: linear-gradient(to right,#8b43ff 0% , #6a25da 50%);
+  background: linear-gradient(270deg, rgba(139,67,255,1) 0%, rgba(49,9,115,1) 100%);
   height: 70vh;
   clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
   display: flex;
   justify-content: center;
 
   .container {
-    margin-top: 2%;
+    margin-top: 20px;
     color: #FFFFFF;
     h2 {
       text-align: center;
       font-size: 3rem;
       font-weight: 700;
+      text-transform: uppercase;
     }
 
     .data {
       display: flex;
 
       .pic {
-        text-align: center;
-        width: 50%;
+        text-align: right;
+        margin-right: 40px;
+        width: 40%;
 
         img {
           box-shadow: 0 0rem 1rem rgba(0,0,0,0.4);
-          width: 60%;
+          width: 65%;
           border-radius: 5px;
         }
 
       }
 
       .text {
+        margin-left: 40px;
+        font-size: 17px;
+        margin-top: 60px;
         display: inline-block;
         position: relative;
-        top: 60px;
+        height: fit-content;
         width: 50%;
         p {
-          width: 80%;
+          width: 90%;
         }
 
 
         a {
-          border: #8b43ff 2px solid;
-          color: #8b43ff;
+          border: #FFFFFF 2px solid;
+          color: #FFFFFF;
           display: block;
-          font-size: 1.5rem;
+          font-size: 1.1rem;
           padding: 6px 30px;
           text-decoration: none;
           width: fit-content;
 
           transition: all 0.3s ease-out;
-          background: linear-gradient(to right,#8b43ff 0% , #6a25da 50%, white 50%) right bottom;
+          background: linear-gradient(to right, white 50%,#8b43ff 0% , #6a25da 50%) right bottom;
           background-size: 200% 100%;
           font-weight: 700;
           &:hover {
             background-position: left bottom;
-            color: #FFFFFF;
+            color: #8b43ff;
           }
         }
       }
     }
   }
 }
+
