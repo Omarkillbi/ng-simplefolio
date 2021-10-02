@@ -1,11 +1,11 @@
 <section>
   <div class="container">
-    <h2>About Me</h2>
+    <h2 [@titleAnimation]="titleState">About Me</h2>
     <div class="data">
       <div class="pic">
-        <img src="assets/user.jpg" alt="">
+        <img [@pictureAnimation]="pictureState" src="assets/user.jpg" alt="">
       </div>
-      <div class="text">
+      <div [@textAnimation]="textState" class="text">
         <p>This is where you can describe about yourself. The more you describe about yourself, the more chances you can!</p>
         <p>Extra Information about you! like hobbies and your goals.</p>
         <a href>View Resume</a>
