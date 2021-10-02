@@ -22,11 +22,20 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
         'opacity': '0',
         'transform': 'translateX(-5%)'
       })),
+      state("standByBottom", style({
+        'opacity': '0',
+        'transform': 'translateY(15%)'
+      })),
       state("In", style({
         'opacity': '1',
         'transform': 'translateX(0)'
       })),
-      transition('standBy => In', animate("900ms 0ms cubic-bezier(0.5, 0, 0, 1)"))
+      state("InFromBottom", style({
+        'opacity': '1',
+        'transform': 'translateX(0)'
+      })),
+      transition('standBy => In', animate("900ms 0ms cubic-bezier(0.5, 0, 0, 1)")),
+      transition('standByBottom => InFromBottom', animate("900ms 0ms cubic-bezier(0.5, 0, 0, 1)"))
     ]),
     trigger('titleAnimation', [
       state("standBy", style({
@@ -45,18 +54,21 @@ export class AboutMeSectionComponent implements OnInit {
   textState = 'standBy';
   titleState = 'standBy';
 
-  constructor() { }
+  constructor() {
+    this.textState = window.innerWidth > 768 && this.triggered === false ? 'standBy' : 'standByBottom';
+  }
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any): void {
     if (window.scrollY  > 200 && this.triggered === false) {
       this.pictureState = 'In';
-      this.textState = 'In';
+      this.textState = window.innerWidth > 768 ? 'In' : 'InFromBottom';
       this.titleState = 'In';
       this.triggered = true;
     }
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
+
+
 
 }
