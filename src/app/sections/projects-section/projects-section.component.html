@@ -1,79 +1,20 @@
 <section>
   <h2>Projects</h2>
-  <div class="project">
-    <div class="info">
+  <div class="project" *ngFor="let project of getProject()">
+    <div class="info" [@slideInAnimation]="project.visible ? 'inFromLeft' : 'standByLeft'">
       <h3>
-        Project Title 0
+        {{ project.title }}
       </h3>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Excepturi neque, ipsa animi maiores repellendus distinctio aperiam earum dolor voluptatum consequatur
-        blanditiis inventore debitis fuga numquam voluptate ex architecto itaque molestiae.
+        {{ project.text }}
       </p>
       <div class="buttons">
-        <a class="primary-btn" href="">See Live</a>
-        <a class="secondary-btn" href="">Source Code</a>
+        <a class="primary-btn" [href]="project.demoLink">See Live</a>
+        <a class="secondary-btn" [href]="project.codeLink">Source Code</a>
       </div>
     </div>
-    <div class="img-wrapper">
-      <img src="assets/project-img.jpg" alt="">
-    </div>
-  </div>
-  <div class="project">
-    <div class="info">
-      <h3>
-        Project Title 1
-      </h3>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Excepturi neque, ipsa animi maiores repellendus distinctio aperiam earum dolor voluptatum consequatur
-        blanditiis inventore debitis fuga numquam voluptate ex architecto itaque molestiae.
-      </p>
-      <div class="buttons">
-        <a class="primary-btn" href="">See Live</a>
-        <a class="secondary-btn" href="">Source Code</a>
-      </div>
-    </div>
-    <div class="img-wrapper">
-      <img src="assets/project-img.jpg" alt="">
-    </div>
-  </div>
-  <div class="project">
-    <div class="info">
-      <h3>
-        Project Title 2
-      </h3>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Excepturi neque, ipsa animi maiores repellendus distinctio aperiam earum dolor voluptatum consequatur
-        blanditiis inventore debitis fuga numquam voluptate ex architecto itaque molestiae.
-      </p>
-      <div class="buttons">
-        <a class="primary-btn" href="">See Live</a>
-        <a class="secondary-btn" href="">Source Code</a>
-      </div>
-    </div>
-    <div class="img-wrapper">
-      <img src="assets/project-img.jpg" alt="">
-    </div>
-  </div>
-  <div class="project">
-    <div class="info">
-      <h3>
-        Project Title 3
-      </h3>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Excepturi neque, ipsa animi maiores repellendus distinctio aperiam earum dolor voluptatum consequatur
-        blanditiis inventore debitis fuga numquam voluptate ex architecto itaque molestiae.
-      </p>
-      <div class="buttons">
-        <a class="primary-btn" href="">See Live</a>
-        <a class="secondary-btn" href="">Source Code</a>
-      </div>
-    </div>
-    <div class="img-wrapper">
-      <img src="assets/project-img.jpg" alt="">
+    <div class="img-wrapper" [@slideInAnimation]="project.visible ? 'inFromRight' : 'standByRight'">
+      <img [src]="'assets/' + project.imageName + '.jpg'" alt="">
     </div>
   </div>
 </section>

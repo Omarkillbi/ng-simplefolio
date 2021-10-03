@@ -1,5 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import { appear, slideIn } from '../../components/animations';
+import { appear, appearIn } from '../../components/animations';
 
 
 
@@ -7,7 +7,7 @@ import { appear, slideIn } from '../../components/animations';
   selector: 'app-about-me-section',
   templateUrl: './about-me-section.component.html',
   styleUrls: ['./about-me-section.component.scss', 'about-me-section.component.query.scss'],
-  animations: [ slideIn, appear ]
+  animations: [ appearIn, appear ]
 })
 export class AboutMeSectionComponent implements OnInit {
   triggered = false;
@@ -16,20 +16,18 @@ export class AboutMeSectionComponent implements OnInit {
   titleState = 'standBy';
 
   constructor() {
-    this.textState = window.innerWidth > 768 && !this.triggered ? 'standByRight' : 'standByBottom';
+    this.textState = window.innerWidth > 768 && !this.triggered ? 'standByLeft' : 'standByBottom';
   }
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any): void {
     if (window.scrollY  > 200 && !this.triggered) {
       this.pictureState = 'inFromBottom';
-      this.textState = window.innerWidth > 768 ? 'inFromRight' : 'inFromBottom';
+      this.textState = window.innerWidth > 768 ? 'inFromLeft' : 'inFromBottom';
       this.titleState = 'In';
       this.triggered = true;
     }
   }
 
   ngOnInit(): void {}
-
-
 
 }
