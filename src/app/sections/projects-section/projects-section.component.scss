@@ -3,22 +3,69 @@ section {
   flex-direction: column;
 
   align-items: center;
+
   h2 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.7rem;
     text-transform: uppercase;
     font-weight: 700;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
   }
+
   .project {
     display: flex;
-    max-width: 1140px;
+    max-width: 1320px;
     margin-bottom: 40px;
 
-
+    // to optimise adjust and clean this section and file q
     .info {
       width: 30%;
+      h3 {
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin: 0;
+      }
+      p {
+        font-size: 1.1rem;
+        font-weight: 400;
+        word-spacing: 2px;
+      }
+      .buttons {
+        .primary-btn {
+          border: #8b43ff 2px solid;
+          color: #8b43ff;
+          display: inline-block;
+          font-size: 1rem;
+          margin-right: 5px;
+          padding: 6px 30px;
+          text-decoration: none;
+          width: fit-content;
 
+          transition: all 0.3s ease-out;
+          background: linear-gradient(to right,#8b43ff 0% , #6a25da 50%, white 50%) right bottom;
+          background-size: 200% 100%;
+          font-weight: 700;
+          &:hover {
+            background-position: left bottom;
+            color: #FFFFFF;
+          }
+        }
+
+        .secondary-btn {
+            color: #8b43ff;
+            display: inline-block;
+            font-size: 1rem;
+            padding: 6px 20px;
+            text-decoration: none;
+            transition: all .25s ease-in-out;
+            font-weight: 700;
+            &:hover {
+              transform: translateX(2px);
+
+          }
+        }
+
+      }
     }
 
     .img-wrapper {
