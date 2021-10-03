@@ -30,5 +30,41 @@
 
 
 @media screen and (max-width: 768px) {
+  section {
+    h2 {
+      margin: 45px 0 40px;
+      font-size: 2rem;
+    }
+    .project {
+      .info {
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 20px;
 
+        p {
+          margin-top: 12px;
+        }
+      }
+      .img-wrapper {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  section {
+    h2 {
+      margin: 30px 0;
+      font-size: 1.8rem;
+    }
+    .project {
+      .info {
+        width: 90%;
+      }
+      .img-wrapper {
+        width: 90%;
+      }
+    }
+  }
 }
