@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {AfterViewChecked, Component, HostListener, OnInit} from '@angular/core';
 import { appearIn } from '../../components/animations';
 import { projects } from './mockData';
 @Component({
@@ -7,23 +7,31 @@ import { projects } from './mockData';
   styleUrls: ['./projects-section.component.scss', 'project-section.component.query.scss'],
   animations: [ appearIn ]
 })
-export class ProjectsSectionComponent implements OnInit {
+export class ProjectsSectionComponent implements AfterViewChecked {
+  projects = projects;
+  constructor() {
+
+  }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any): void {
-    let currentScrolledElement =  Math.trunc((window.scrollY - 950) / 350);
+
+    let currentScrolledElement =  window.innerWidth > 991 ?
+      Math.trunc((window.scrollY - 950) / 350) :
+      Math.trunc((window.scrollY - 950) / 500) ;
     if ( window.scrollY > 850 && !projects[currentScrolledElement].visible) {
       projects[currentScrolledElement].visible = true;
-      // for (let i=0)
     }
-
-    console.log("window.scrollY = " + Math.trunc((window.scrollY - 950) / 350));
   }
 
-  getProject(): any {
-    return projects;
-  }
 
-  ngOnInit(): void {}
+  ngAfterViewChecked(): void {
+    let currentScrolledElement =  window.innerWidth > 991 ?
+      Math.trunc((window.scrollY - 950) / 350) :
+      Math.trunc((window.scrollY - 950) / 500) ;
+    for(let i=0; i<currentScrolledElement; i++) {
+      projects[i].visible = true;
+    }
+  }
 
 }

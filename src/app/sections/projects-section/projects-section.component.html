@@ -1,6 +1,6 @@
 <section>
   <h2>Projects</h2>
-  <div class="project" *ngFor="let project of getProject()">
+  <div class="project" *ngFor="let project of projects">
     <div class="info" [@slideInAnimation]="project.visible ? 'inFromLeft' : 'standByLeft'">
       <h3>
         {{ project.title }}
