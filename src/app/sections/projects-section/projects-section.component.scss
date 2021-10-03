@@ -16,12 +16,14 @@ section {
     display: flex;
     max-width: 1320px;
     margin-bottom: 40px;
+    justify-content: center;
 
     // to optimise adjust and clean this section and file q
     .info {
-      width: 30%;
+      width: 35%;
+      margin-right: 40px;
       h3 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         font-weight: 700;
         margin: 0;
       }
@@ -71,9 +73,9 @@ section {
     .img-wrapper {
       display: flex;
       justify-content: center;
-      width: 70%;
+      width: 50%;
       img {
-        width: 80%;
+        width: 100%;
       }
     }
   }

@@ -4,21 +4,17 @@ import { projects } from './mockData';
 @Component({
   selector: 'app-projects-section',
   templateUrl: './projects-section.component.html',
-  styleUrls: ['./projects-section.component.scss'],
+  styleUrls: ['./projects-section.component.scss', 'project-section.component.query.scss'],
   animations: [ appearIn ]
 })
 export class ProjectsSectionComponent implements OnInit {
-
-  imgState = 'standByRight';
-  infoState = 'standByLeft';
-
-  constructor() { }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any): void {
     let currentScrolledElement =  Math.trunc((window.scrollY - 950) / 350);
     if ( window.scrollY > 850 && !projects[currentScrolledElement].visible) {
       projects[currentScrolledElement].visible = true;
+      // for (let i=0)
     }
 
     console.log("window.scrollY = " + Math.trunc((window.scrollY - 950) / 350));
@@ -28,8 +24,6 @@ export class ProjectsSectionComponent implements OnInit {
     return projects;
   }
 
-  ngOnInit(): void {
-    console.log(this.getProject());
-  }
+  ngOnInit(): void {}
 
 }
