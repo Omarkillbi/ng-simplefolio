@@ -4,7 +4,7 @@ import { appear, appearIn } from '../../components/animations';
 @Component({
   selector: 'app-contact-section',
   templateUrl: './contact-section.component.html',
-  styleUrls: ['./contact-section.component.scss'],
+  styleUrls: ['./contact-section.component.scss', 'contact-section.component.query.scss'],
   animations: [ appear, appearIn ]
 })
 export class ContactSectionComponent implements OnInit {

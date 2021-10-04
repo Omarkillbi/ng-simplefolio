@@ -1,0 +1,24 @@
+@media screen and (max-width: 1199px) {
+
+  section {
+    height: 35vh;
+    clip-path: none;
+    margin-top: 0;
+    h2{
+      margin: 0;
+    }
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  section {
+
+    h2{
+      font-size: 2rem;
+    }
+    p{
+      font-size: 1.4rem;
+    }
+  }
+}
