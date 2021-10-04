@@ -17,7 +17,7 @@ export class ProjectsSectionComponent implements AfterViewChecked {
   onWindowScroll(event: any): void {
     console.log(window.scrollY);
     let currentScrolledElement =  window.innerWidth > 991 ?
-      Math.trunc((window.scrollY - 950) / 350) :
+      Math.trunc((window.scrollY - 950) / 300) :
       Math.trunc((window.scrollY - 950) / 500) ;
     if ( window.scrollY > 750 && !projects[currentScrolledElement].visible) {
       projects[currentScrolledElement].visible = true;
