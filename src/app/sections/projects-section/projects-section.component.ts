@@ -15,7 +15,6 @@ export class ProjectsSectionComponent implements AfterViewChecked {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any): void {
-    console.log(window.scrollY);
     let currentScrolledElement =  window.innerWidth > 991 ?
       Math.trunc((window.scrollY - 950) / 300) :
       Math.trunc((window.scrollY - 950) / 500) ;

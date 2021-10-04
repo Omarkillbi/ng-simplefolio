@@ -1,5 +1,48 @@
 footer {
   background-color: #333333;
-  height: 30vh;
+  height: fit-content;
   color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .content {
+    padding-top: 10px;
+    text-align: center;
+
+
+    i {
+      color: #FFFFFF;
+    }
+
+    .arrow-up {
+      padding: 30px 0;
+      i{
+        font-size: 25px;
+        font-weight: 900;
+      }
+
+    }
+    .links-icons {
+      > * {
+        margin: 0 15px;
+        font-size: 30px;
+      }
+
+    }
+    hr {
+      margin: 25px auto 0;
+      width: 40%;
+      border: 1px solid grey;
+      opacity: 0.2;
+
+    }
+
+    p {
+      color: grey;
+      opacity: 0.6;
+      font-size: 0.8rem;
+      margin-bottom: 25px;
+    }
+  }
 }
