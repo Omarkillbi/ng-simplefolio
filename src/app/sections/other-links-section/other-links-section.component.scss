@@ -13,15 +13,19 @@ footer {
 
     i {
       color: #FFFFFF;
+      cursor: pointer;
+      font-size: 30px;
+      transition: 0.6s ;
+      &:hover {
+        transform: translateY(-7px);
+      }
     }
 
     .arrow-up {
       padding: 30px 0;
-      i{
-        font-size: 25px;
-        font-weight: 900;
+        i{
+          font-size: 25px;
       }
-
     }
     .links-icons {
       > * {
