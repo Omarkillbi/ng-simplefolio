@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, Output, EventEmitter} from '@angular/core';
 import { AnimationEvent } from "@angular/animations";
 import { appearIn } from '../../components/animations';
 
@@ -12,6 +12,7 @@ export class HeroSectionComponent implements AfterViewInit {
 
   titleState = 'standByLeft';
   buttonState = 'standByLeft';
+
   constructor() { }
 
   animationDone(event: AnimationEvent) {
@@ -22,4 +23,14 @@ export class HeroSectionComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.titleState="inFromLeft";
   }
+
+  scrollToAboutSection() {
+    window.scrollTo({
+      top: window.innerHeight,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
+
 }
