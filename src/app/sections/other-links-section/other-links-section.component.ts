@@ -12,4 +12,12 @@ export class OtherLinksSectionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scrollToAboutSection() {
+    window.scrollTo({
+      top: window.innerHeight,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
 }
