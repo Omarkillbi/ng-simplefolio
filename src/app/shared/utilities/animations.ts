@@ -19,7 +19,7 @@ export const dynamicAppear = trigger('dynamicAppear', [
     'opacity': '1',
     'transform': 'translate(0, 0)'
   })),
-  transition('standBy => in', animate("{{ duration }} cubic-bezier(0.5, 0, 0, 1)"))
+  transition('standBy => in', animate("{{ duration }} cubic-bezier(0.5, 0, 0, 1)"), {params: { duration: '1s'}})
 ]);
 
 export const appearFromRight = trigger('appearFromRight', [
