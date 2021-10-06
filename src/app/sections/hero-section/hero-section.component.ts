@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, Output, EventEmitter} from '@angular/core';
 import { AnimationEvent } from "@angular/animations";
-import { appearIn } from '../../components/animations';
+import { appearIn } from '../../shared/utilities/animations';
 
 @Component({
   selector: 'app-hero-section',

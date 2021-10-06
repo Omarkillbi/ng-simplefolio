@@ -37,7 +37,6 @@ export const appearIn = trigger('slideInAnimation', [
     'opacity': '1',
     'transform': 'translateX(0)'
   })),
-
   transition('standByRight => inFromRight', animate("900ms 0ms cubic-bezier(0.5, 0, 0, 1)")),
   transition('standByBottom => inFromBottom', animate("900ms 0ms cubic-bezier(0.5, 0, 0, 1)")),
   transition('standByLeft => inFromLeft', animate("900ms 0ms cubic-bezier(0.5, 0, 0, 1)"))
