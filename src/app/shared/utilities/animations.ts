@@ -4,10 +4,47 @@ export const appear = trigger('appear', [
   state("standBy", style({
     'opacity': '0',
   })),
-  state("In", style({
+  state("in", style({
     'opacity': '1',
   })),
   transition('standBy => In', animate("1500ms 0ms cubic-bezier(0.5, 0, 0, 1)"))
+]);
+
+export const appearFromRight = trigger('appearFromRight', [
+  state("standBy", style({
+    'opacity': '0',
+    'transform': 'translateX(5%)'
+  })),
+  state("in", style({
+    'opacity': '1',
+    'transform': 'translateX(0)'
+  })),
+  transition('standBy => in', animate("1500ms 0ms cubic-bezier(0.5, 0, 0, 1)"))
+]);
+
+export const appearFromLeft = trigger('appearFromLeft', [
+  state("standBy", style({
+    'opacity': '0',
+    'transform': 'translateX(-5%)'
+  })),
+  state("in", style({
+    'opacity': '1',
+    'transform': 'translateX(0)'
+  })),
+  transition('standBy => in', animate("{{ duration }} cubic-bezier(0.5, 0, 0, 1)")),
+
+]);
+
+export const appearFromBottom = trigger('appearFromBottom', [
+  state("standBy", style({
+    'opacity': '0',
+    'transform': 'translateY(15%)'
+  })),
+  state("in", style({
+    'opacity': '1',
+    'transform': 'translateX(0)'
+  })),
+  transition('standBy => in', animate("1500ms 0ms cubic-bezier(0.5, 0, 0, 1)"))
 ]);
 
 export const appearIn = trigger('slideInAnimation', [

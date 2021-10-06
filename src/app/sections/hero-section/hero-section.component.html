@@ -1,10 +1,10 @@
 <section >
   <div class="text">
-    <h1 [@slideInAnimation]="titleState" (@slideInAnimation.done)="animationDone($event)"  >
+    <h1 [@appearFromLeft]="{ value: titleState, params:{ duration: '1s' }}" (@appearFromLeft.done)="animationDone($event)"  >
       Hi, my name is <span>[Your Name]</span>
       <br>
         I'm a [Your Position]
     </h1>
-    <a [@slideInAnimation]="buttonState" (click)="scrollToAboutSection()">Know more</a>
+    <a [@appearFromLeft]="{ value: buttonState, params: { duration: '1s' }}" (click)="scrollToAboutSection()">Know more</a>
   </div>
 </section>

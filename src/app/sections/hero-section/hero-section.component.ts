@@ -1,27 +1,30 @@
 import {AfterViewInit, Component, Output, EventEmitter} from '@angular/core';
 import { AnimationEvent } from "@angular/animations";
-import { appearIn } from '../../shared/utilities/animations';
+import { appearFromLeft } from '../../shared/utilities/animations';
 
 @Component({
   selector: 'app-hero-section',
   templateUrl: './hero-section.component.html',
   styleUrls: ['./hero-section.component.scss', 'hero-section.component.query.scss'],
-  animations: [ appearIn ]
+  animations: [ appearFromLeft ]
 })
 export class HeroSectionComponent implements AfterViewInit {
 
-  titleState = 'standByLeft';
-  buttonState = 'standByLeft';
+  titleState = 'standBy';
+  buttonState: String;
 
-  constructor() { }
+  constructor() {
+    this.buttonState = 'standBy'
+  }
 
   animationDone(event: AnimationEvent) {
+    console.log(event)
     if(event.totalTime)
-      this.buttonState = 'inFromLeft';
+      this.buttonState = 'in';
   }
 
   ngAfterViewInit(): void {
-    this.titleState="inFromLeft";
+    this.titleState="in";
   }
 
   scrollToAboutSection() {
@@ -31,6 +34,4 @@ export class HeroSectionComponent implements AfterViewInit {
       behavior: 'smooth'
     });
   }
-
-
 }
