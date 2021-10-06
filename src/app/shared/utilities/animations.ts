@@ -10,6 +10,18 @@ export const appear = trigger('appear', [
   transition('standBy => In', animate("1500ms 0ms cubic-bezier(0.5, 0, 0, 1)"))
 ]);
 
+export const dynamicAppear = trigger('dynamicAppear', [
+  state("standBy", style({
+    'opacity': '0',
+    'transform': 'translate({{ startX }}, {{ startY }})'
+  }), {params: {startX: 0, startY: 0}}),
+  state("in", style({
+    'opacity': '1',
+    'transform': 'translate(0, 0)'
+  })),
+  transition('standBy => in', animate("{{ duration }} cubic-bezier(0.5, 0, 0, 1)"))
+]);
+
 export const appearFromRight = trigger('appearFromRight', [
   state("standBy", style({
     'opacity': '0',
@@ -44,7 +56,7 @@ export const appearFromBottom = trigger('appearFromBottom', [
     'opacity': '1',
     'transform': 'translateX(0)'
   })),
-  transition('standBy => in', animate("1500ms 0ms cubic-bezier(0.5, 0, 0, 1)"))
+  transition('standBy => in', animate("1500ms cubic-bezier(0.5, 0, 0, 1)"))
 ]);
 
 export const appearIn = trigger('slideInAnimation', [
@@ -74,8 +86,8 @@ export const appearIn = trigger('slideInAnimation', [
     'opacity': '1',
     'transform': 'translateX(0)'
   })),
-  transition('standByRight => inFromRight', animate("900ms 0ms cubic-bezier(0.5, 0, 0, 1)")),
-  transition('standByBottom => inFromBottom', animate("900ms 0ms cubic-bezier(0.5, 0, 0, 1)")),
-  transition('standByLeft => inFromLeft', animate("900ms 0ms cubic-bezier(0.5, 0, 0, 1)"))
+  transition('standByRight => inFromRight', animate("1s cubic-bezier(0.5, 0, 0, 1)")),
+  transition('standByBottom => inFromBottom', animate("1s cubic-bezier(0.5, 0, 0, 1)")),
+  transition('standByLeft => inFromLeft', animate("1s cubic-bezier(0.5, 0, 0, 1)"))
 ]);
 

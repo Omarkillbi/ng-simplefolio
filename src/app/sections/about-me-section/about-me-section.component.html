@@ -3,9 +3,9 @@
     <h2 [@appear]="titleState">About Me</h2>
     <div class="data">
       <div class="pic">
-        <img [@slideInAnimation]="pictureState" src="assets/user.jpg" alt="">
+        <img [@appearFromBottom]="{ value: pictureState, params: { duration: '1s'}}" src="assets/user.jpg" alt="">
       </div>
-      <div [@slideInAnimation]="textState" class="text">
+      <div [@appearFromLeft]="{ value: textState, params: { duration: '1s'}}" class="text">
         <p>This is where you can describe about yourself. The more you describe about yourself, the more chances you can!</p>
         <p>Extra Information about you! like hobbies and your goals.</p>
         <a href>View Resume</a>

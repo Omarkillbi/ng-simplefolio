@@ -1,12 +1,12 @@
 import {AfterViewInit, Component, Output, EventEmitter} from '@angular/core';
 import { AnimationEvent } from "@angular/animations";
-import { appearFromLeft } from '../../shared/utilities/animations';
+import { appearFromLeft, dynamicAppear } from '../../shared/utilities/animations';
 
 @Component({
   selector: 'app-hero-section',
   templateUrl: './hero-section.component.html',
   styleUrls: ['./hero-section.component.scss', 'hero-section.component.query.scss'],
-  animations: [ appearFromLeft ]
+  animations: [ appearFromLeft, dynamicAppear ]
 })
 export class HeroSectionComponent implements AfterViewInit {
 
@@ -18,7 +18,6 @@ export class HeroSectionComponent implements AfterViewInit {
   }
 
   animationDone(event: AnimationEvent) {
-    console.log(event)
     if(event.totalTime)
       this.buttonState = 'in';
   }
