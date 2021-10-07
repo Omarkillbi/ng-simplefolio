@@ -1,6 +1,6 @@
 <section>
   <h2  [@dynamicAppear]="animationState.title">Projects</h2>
-  <div class="project" *ngFor="let project of projects; let i = index">
+  <div class="project" *ngFor="let project of projects; let i = index" #Project>
     <div class="info" [@dynamicAppear]="{ value: animationState.projects[i], params: { startX: '-5%', startY: '0' }}">
       <h3>
         {{ project.title }}

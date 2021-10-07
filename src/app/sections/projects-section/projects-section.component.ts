@@ -1,4 +1,4 @@
-import { AfterViewChecked, Component, HostListener } from '@angular/core';
+import {AfterViewChecked, Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import { dynamicAppear } from '../../shared/utilities/animations';
 import { projects } from './mockData';
 @Component({
@@ -10,26 +10,24 @@ import { projects } from './mockData';
 export class ProjectsSectionComponent implements AfterViewChecked {
   projects = projects;
   animationState = { title: 'standBy', projects: new Array(projects.length).fill('standBy') }
-  titleState = 'standBy';
-  constructor() {}
+  projectHeight = 0;
+  @ViewChild('Project') elementView: any;
+  constructor() { }
+
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any): void {
-    let currentScrolledElement =  window.innerWidth > 991 ?
-      Math.trunc((window.scrollY - 950) / 300) :
-      Math.trunc((window.scrollY - 950) / 500) ;
-    if ( window.scrollY > 900 )
+    let currentScrolledElement = Math.trunc((window.scrollY - 950) / this.projectHeight);
+    if ( window.scrollY > 900 && this.animationState.projects[currentScrolledElement] !== 'in') {
       this.animationState.title = 'in';
-    if ( window.scrollY > 750 && this.animationState.projects[currentScrolledElement] !== 'in') {
       this.animationState.projects[currentScrolledElement] = 'in';
     }
   }
 
 
   ngAfterViewChecked(): void {
-    let currentScrolledElement =  window.innerWidth > 991 ?
-      Math.trunc((window.scrollY - 950) / 350) :
-      Math.trunc((window.scrollY - 950) / 500) ;
+    this.projectHeight = this.elementView.nativeElement.offsetHeight;
+    let currentScrolledElement = Math.trunc((window.scrollY - 950) / this.projectHeight);
     for(let i=0; i<currentScrolledElement; i++) {
       this.animationState.projects[i] = 'in';
     }
