@@ -6,8 +6,7 @@ export const projects = [
       '        blanditiis inventore debitis fuga numquam voluptate ex architecto itaque molestiae.',
     demoLink: '',
     codeLink: '',
-    imageName: 'project-img',
-    visible: false
+    imageName: 'project-img'
   },
   {
     title: 'Project name 1',
@@ -16,8 +15,7 @@ export const projects = [
       '        blanditiis inventore debitis fuga numquam voluptate ex architecto itaque molestiae.',
     demoLink: '',
     codeLink: '',
-    imageName: 'project-img',
-    visible: false
+    imageName: 'project-img'
   },
   {
     title: 'Project name 2',
@@ -26,8 +24,7 @@ export const projects = [
       '        blanditiis inventore debitis fuga numquam voluptate ex architecto itaque molestiae.',
     demoLink: '',
     codeLink: '',
-    imageName: 'project-img',
-    visible: false
+    imageName: 'project-img'
   },
   {
     title: 'Project name 3',
@@ -36,7 +33,6 @@ export const projects = [
       '        blanditiis inventore debitis fuga numquam voluptate ex architecto itaque molestiae.',
     demoLink: '',
     codeLink: '',
-    imageName: 'project-img',
-    visible: false
+    imageName: 'project-img'
   }
 ]

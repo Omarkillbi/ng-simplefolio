@@ -1,28 +1,27 @@
-import {AfterViewChecked, Component, HostListener, OnInit} from '@angular/core';
-import { appearIn, appear } from '../../shared/utilities/animations';
+import { AfterViewChecked, Component, HostListener } from '@angular/core';
+import { dynamicAppear } from '../../shared/utilities/animations';
 import { projects } from './mockData';
 @Component({
   selector: 'app-projects-section',
   templateUrl: './projects-section.component.html',
   styleUrls: ['./projects-section.component.scss', 'project-section.component.query.scss'],
-  animations: [ appear, appearIn ]
+  animations: [ dynamicAppear ]
 })
 export class ProjectsSectionComponent implements AfterViewChecked {
   projects = projects;
+  animationState = { title: 'standBy', projects: new Array(projects.length).fill('standBy') }
   titleState = 'standBy';
-  constructor() {
-
-  }
+  constructor() {}
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any): void {
     let currentScrolledElement =  window.innerWidth > 991 ?
       Math.trunc((window.scrollY - 950) / 300) :
       Math.trunc((window.scrollY - 950) / 500) ;
-    if ( window.scrollY > 1000 )
-      this.titleState = 'In';
-    if ( window.scrollY > 750 && !projects[currentScrolledElement].visible) {
-      projects[currentScrolledElement].visible = true;
+    if ( window.scrollY > 900 )
+      this.animationState.title = 'in';
+    if ( window.scrollY > 750 && this.animationState.projects[currentScrolledElement] !== 'in') {
+      this.animationState.projects[currentScrolledElement] = 'in';
     }
   }
 
@@ -32,7 +31,7 @@ export class ProjectsSectionComponent implements AfterViewChecked {
       Math.trunc((window.scrollY - 950) / 350) :
       Math.trunc((window.scrollY - 950) / 500) ;
     for(let i=0; i<currentScrolledElement; i++) {
-      projects[i].visible = true;
+      this.animationState.projects[i] = 'in';
     }
   }
 
