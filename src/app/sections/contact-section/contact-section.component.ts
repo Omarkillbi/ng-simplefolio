@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { appearAnimation } from '../../shared/utilities/animations';
+import { personalData } from '../../data';
 
 @Component({
   selector: 'app-contact-section',
@@ -11,6 +12,10 @@ export class ContactSectionComponent {
 
   animations = { state: 'standBy', params: { startX: '0%', startY: '15%' }}
   constructor() { }
+
+  getData() {
+    return { email: personalData.yourEmail, callToAction: personalData.yourCallToAction };
+  }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any): void {

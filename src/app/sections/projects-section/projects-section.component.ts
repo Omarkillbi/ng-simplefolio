@@ -1,6 +1,6 @@
 import {AfterViewChecked, Component, HostListener, ViewChild} from '@angular/core';
 import { appearAnimation } from '../../shared/utilities/animations';
-import { projects } from './mockData';
+import { projects } from '../../data';
 @Component({
   selector: 'app-projects-section',
   templateUrl: './projects-section.component.html',
