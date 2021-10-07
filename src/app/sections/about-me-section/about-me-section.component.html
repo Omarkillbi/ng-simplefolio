@@ -3,12 +3,15 @@
     <h2 [@appearAnimation]="{ value: animation.state }">About Me</h2>
     <div class="data">
       <div class="pic">
-        <img [@appearAnimation]="{ value: animation.state, params: { startX: '0%', startY: '15%' }}" src="assets/user.jpg" alt="">
+        <img
+          [@appearAnimation]="{ value: animation.state, params: { startX: '0%', startY: '15%' }}"
+          [src]="'assets/' + getData().imageName +'.jpg'"
+          alt=""
+        >
       </div>
       <div [@appearAnimation]="{ value: animation.state, params: animation.params}" class="text">
-        <p>This is where you can describe about yourself. The more you describe about yourself, the more chances you can!</p>
-        <p>Extra Information about you! like hobbies and your goals.</p>
-        <a href>View Resume</a>
+        <p *ngFor="let paragraph of getData().description">{{ paragraph }}</p>
+        <a [href]="getData().resumeURL">View Resume</a>
       </div>
     </div>
   </div>

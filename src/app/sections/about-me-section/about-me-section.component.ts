@@ -1,5 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import { appearAnimation } from '../../shared/utilities/animations';
+import { personalData } from '../../data';
 
 @Component({
   selector: 'app-about-me-section',
@@ -17,6 +18,14 @@ export class AboutMeSectionComponent implements OnInit {
     this.animation.params = window.innerWidth > 768 && this.animation.state === 'standBy' ?
       { startX: '-5%', startY: '0'} :
       { startX: '0', startY: '15%'};
+  }
+
+  getData() {
+    return {
+      imageName: personalData.PersonalPictureName,
+      description: personalData.description,
+      resumeURL: personalData.resumeURL
+    };
   }
 
   @HostListener('window:scroll', ['$event'])

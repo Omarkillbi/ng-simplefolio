@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, Output, EventEmitter} from '@angular/core';
 import { AnimationEvent } from "@angular/animations";
 import { appearAnimation } from '../../shared/utilities/animations';
+import { personalData } from '../../data';
 
 @Component({
   selector: 'app-hero-section',
@@ -17,13 +18,17 @@ export class HeroSectionComponent implements AfterViewInit {
     this.buttonState = 'standBy'
   }
 
+  ngAfterViewInit(): void {
+    this.titleState="in";
+  }
+
   animationDone(event: AnimationEvent) {
     if(event.totalTime)
       this.buttonState = 'in';
   }
 
-  ngAfterViewInit(): void {
-    this.titleState="in";
+  getData() {
+    return { fullName: personalData.fullName, position: personalData.position };
   }
 
   scrollToAboutSection() {

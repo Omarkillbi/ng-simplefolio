@@ -1,9 +1,9 @@
 <section >
   <div class="text">
     <h1 [@appearAnimation]="{ value: titleState, params:{ duration: '1s', startX: '-5%', startY: '0' }}" (@appearAnimation.done)="animationDone($event)"  >
-      Hi, my name is <span>[Your Name]</span>
+      Hi, my name is <span>{{ getData().fullName }}</span>
       <br>
-        I'm a [Your Position]
+        I'm a {{ getData().position }}
     </h1>
     <a [@appearAnimation]="{ value: buttonState, params: { duration: '1s', startX: '-5%', startY: '0' }}" (click)="scrollToAboutSection()">Know more</a>
   </div>
