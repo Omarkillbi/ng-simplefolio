@@ -1,12 +1,12 @@
 import {AfterViewInit, Component, Output, EventEmitter} from '@angular/core';
 import { AnimationEvent } from "@angular/animations";
-import { dynamicAppear } from '../../shared/utilities/animations';
+import { appearAnimation } from '../../shared/utilities/animations';
 
 @Component({
   selector: 'app-hero-section',
   templateUrl: './hero-section.component.html',
   styleUrls: ['./hero-section.component.scss', 'hero-section.component.query.scss'],
-  animations: [ dynamicAppear ]
+  animations: [ appearAnimation ]
 })
 export class HeroSectionComponent implements AfterViewInit {
 

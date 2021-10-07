@@ -1,7 +1,7 @@
 <section>
-  <h2  [@dynamicAppear]="animationState.title">Projects</h2>
+  <h2  [@appearAnimation]="animationState.title">Projects</h2>
   <div class="project" *ngFor="let project of projects; let i = index" #Project>
-    <div class="info" [@dynamicAppear]="{ value: animationState.projects[i], params: { startX: '-5%', startY: '0' }}">
+    <div class="info" [@appearAnimation]="{ value: animationState.projects[i], params: { startX: '-5%', startY: '0' }}">
       <h3>
         {{ project.title }}
       </h3>
@@ -13,7 +13,7 @@
         <a class="secondary-btn" [href]="project.codeLink">Source Code</a>
       </div>
     </div>
-    <div class="img-wrapper" [@dynamicAppear]="{ value: animationState.projects[i], params: { startX: '5%', startY: '0' }}">
+    <div class="img-wrapper" [@appearAnimation]="{ value: animationState.projects[i], params: { startX: '5%', startY: '0' }}">
       <img [src]="'assets/' + project.imageName + '.jpg'" alt="">
     </div>
   </div>

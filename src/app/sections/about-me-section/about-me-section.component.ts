@@ -1,11 +1,11 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import { dynamicAppear } from '../../shared/utilities/animations';
+import { appearAnimation } from '../../shared/utilities/animations';
 
 @Component({
   selector: 'app-about-me-section',
   templateUrl: './about-me-section.component.html',
   styleUrls: ['./about-me-section.component.scss', 'about-me-section.component.query.scss'],
-  animations: [ dynamicAppear ]
+  animations: [ appearAnimation ]
 })
 export class AboutMeSectionComponent implements OnInit {
   // params will be applied for the text conditional animation input

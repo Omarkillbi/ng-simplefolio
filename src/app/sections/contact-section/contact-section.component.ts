@@ -1,11 +1,11 @@
 import { Component, HostListener } from '@angular/core';
-import { dynamicAppear } from '../../shared/utilities/animations';
+import { appearAnimation } from '../../shared/utilities/animations';
 
 @Component({
   selector: 'app-contact-section',
   templateUrl: './contact-section.component.html',
   styleUrls: ['./contact-section.component.scss', 'contact-section.component.query.scss'],
-  animations: [ dynamicAppear ]
+  animations: [ appearAnimation ]
 })
 export class ContactSectionComponent {
 

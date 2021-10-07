@@ -1,11 +1,11 @@
 <section>
   <div class="container">
-    <h2 [@dynamicAppear]="{ value: animation.state }">About Me</h2>
+    <h2 [@appearAnimation]="{ value: animation.state }">About Me</h2>
     <div class="data">
       <div class="pic">
-        <img [@dynamicAppear]="{ value: animation.state, params: { startX: '0%', startY: '15%' }}" src="assets/user.jpg" alt="">
+        <img [@appearAnimation]="{ value: animation.state, params: { startX: '0%', startY: '15%' }}" src="assets/user.jpg" alt="">
       </div>
-      <div [@dynamicAppear]="{ value: animation.state, params: animation.params}" class="text">
+      <div [@appearAnimation]="{ value: animation.state, params: animation.params}" class="text">
         <p>This is where you can describe about yourself. The more you describe about yourself, the more chances you can!</p>
         <p>Extra Information about you! like hobbies and your goals.</p>
         <a href>View Resume</a>
