@@ -1,29 +1,21 @@
-import {Component, HostListener, OnInit} from '@angular/core';
-import { appear, appearIn } from '../../shared/utilities/animations';
+import { Component, HostListener } from '@angular/core';
+import { dynamicAppear } from '../../shared/utilities/animations';
 
 @Component({
   selector: 'app-contact-section',
   templateUrl: './contact-section.component.html',
   styleUrls: ['./contact-section.component.scss', 'contact-section.component.query.scss'],
-  animations: [ appear, appearIn ]
+  animations: [ dynamicAppear ]
 })
-export class ContactSectionComponent implements OnInit {
+export class ContactSectionComponent {
 
-  titleState = 'standBy';
-  infoState = 'standByBottom';
-  triggered = false;
+  animations = { state: 'standBy', params: { startX: '0%', startY: '15%' }}
   constructor() { }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any): void {
-    if (window.scrollY  > 2500 && !this.triggered) {
-      this.titleState = 'In';
-      this.infoState = 'inFromBottom';
+    if (window.scrollY  > 2500 && this.animations.state !== 'in') {
+      this.animations.state = 'in';
     }
   }
-
-  ngOnInit(): void {
-
-  }
-
 }

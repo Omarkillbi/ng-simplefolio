@@ -1,4 +1,4 @@
-import {AfterViewChecked, Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
+import {AfterViewChecked, Component, HostListener, ViewChild} from '@angular/core';
 import { dynamicAppear } from '../../shared/utilities/animations';
 import { projects } from './mockData';
 @Component({
@@ -23,7 +23,6 @@ export class ProjectsSectionComponent implements AfterViewChecked {
       this.animationState.projects[currentScrolledElement] = 'in';
     }
   }
-
 
   ngAfterViewChecked(): void {
     this.projectHeight = this.elementView.nativeElement.offsetHeight;

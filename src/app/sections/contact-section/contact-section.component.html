@@ -1,5 +1,5 @@
 <section>
-  <h2 [@appear] = titleState>Contact</h2>
-  <p [@slideInAnimation]="infoState">Get in Touch</p>
-  <a [@slideInAnimation]="infoState" href="mailto:placeholder@email.com">Email Me</a>
+  <h2 [@dynamicAppear]="animations.state">Contact</h2>
+  <p [@dynamicAppear]="{ value: animations.state, params: animations.params}">Get in Touch</p>
+  <a [@dynamicAppear]="{ value: animations.state, params: animations.params}" href="mailto:placeholder@email.com">Email Me</a>
 </section>
