@@ -99,7 +99,7 @@ Note: It might take time or extra commit for the page to appear.
 ## Technologies/resources used
 
 - [Sass](https://sass-lang.com/documentation) - CSS extension language
-- [Font Aweome](https://sass-lang.com/documentation) - CSS extension language
+- [Font Aweome](https://sass-lang.com/documentation) - Icons library
 
 
 ## License
