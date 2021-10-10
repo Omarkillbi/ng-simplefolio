@@ -1,7 +1,7 @@
 section {
   margin-top: 10px;
   height: 40vh;
-  background: linear-gradient(270deg, rgba(139,67,255,1) 0%, rgba(49,9,115,1) 100%);
+  background: linear-gradient(to left, var(--main-color) 0%, var(--second-color) 100%);
   clip-path: polygon(0 15vh,100% 0,100% 100%,0 100%);
   display: flex;
   flex-direction: column;
@@ -36,12 +36,12 @@ section {
     width: fit-content;
 
     transition: all 0.3s ease-out;
-    background: linear-gradient(to right, white 50%,#8b43ff 0% , #6a25da 50%) right bottom;
+    background: linear-gradient(to right, white 50% ,var(--main-color) 50% , var(--second-color) 140%) right bottom;
     background-size: 200% 100%;
     font-weight: 700;
     &:hover {
       background-position: left bottom;
-      color: #8b43ff;
+      color: var(--main-color);
     }
   }
 

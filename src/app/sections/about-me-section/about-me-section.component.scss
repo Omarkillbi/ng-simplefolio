@@ -44,7 +44,6 @@ section {
           width: 90%;
         }
 
-
         a {
           border: #FFFFFF 2px solid;
           color: #FFFFFF;
@@ -60,7 +59,7 @@ section {
           font-weight: 700;
           &:hover {
             background-position: left bottom;
-            color: #8b43ff;
+            color: var(--main-color);
           }
         }
       }

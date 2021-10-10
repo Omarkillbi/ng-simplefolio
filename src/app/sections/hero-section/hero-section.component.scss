@@ -10,7 +10,7 @@ section {
 
       margin: 10px 0;
       span {
-        color: #8b43ff;
+        color: var(--main-color);
         background: linear-gradient(to left, var(--main-color) 0%, var(--second-color) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -18,8 +18,8 @@ section {
     }
     a {
       opacity: 0;
-      border: #8b43ff 2px solid;
-      color: #8b43ff;
+      border: var(--main-color) 2px solid;
+      color: var(--main-color);
       display: block;
       font-size: 1.5rem;
       padding: 6px 30px;
@@ -28,7 +28,7 @@ section {
       cursor: pointer;
 
       transition: all 0.3s ease-out;
-        background: linear-gradient(to right,var(--main-color) 0% , var(--second-color) 50%, white 50%) right bottom;
+      background: linear-gradient(to right,var(--main-color) 0% , var(--second-color) 50%, white 50%) right bottom;
       background-size: 200% 100%;
       font-weight: 700;
       &:hover {

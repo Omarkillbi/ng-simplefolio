@@ -18,7 +18,7 @@ section {
     margin-bottom: 40px;
     justify-content: center;
 
-    // to optimise adjust and clean this section and file q
+    // TODO: adjust and clean this section
     .info {
       width: 35%;
       margin-right: 40px;
@@ -34,8 +34,8 @@ section {
       }
       .buttons {
         .primary-btn {
-          border: #8b43ff 2px solid;
-          color: #8b43ff;
+          border: var(--main-color) 2px solid;
+          color: var(--main-color);
           display: inline-block;
           font-size: 1rem;
           margin-right: 5px;
@@ -44,7 +44,7 @@ section {
           width: fit-content;
 
           transition: all 0.3s ease-out;
-          background: linear-gradient(to right,#8b43ff 0% , #6a25da 50%, white 50%) right bottom;
+          background: linear-gradient(to right,var(--main-color) 30% , var(--second-color) 50%, white 50%) right bottom;
           background-size: 200% 100%;
           font-weight: 700;
           &:hover {
@@ -54,7 +54,7 @@ section {
         }
 
         .secondary-btn {
-            color: #8b43ff;
+            color: var(--main-color);
             display: inline-block;
             font-size: 1rem;
             padding: 6px 20px;

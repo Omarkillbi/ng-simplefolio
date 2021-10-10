@@ -59,3 +59,10 @@
      imageName: 'project-img'
    }
  ]
+
+ // set main colors here
+ // default color is a purple gradiant
+ export const style = {
+    gradiantStartColor: 'rgba(139,67,255,1)',
+    gradiantEndColor: 'rgba(81,50,131,1)'
+ }
