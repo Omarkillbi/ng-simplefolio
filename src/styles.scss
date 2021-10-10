@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+:root {
+  --main-color: rgba(139,67,255,1);
+  --second-color: rgba(81,50,131,1);
+}
+
 body {
   margin: 0;
   padding: 0;

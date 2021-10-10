@@ -11,7 +11,7 @@ section {
       margin: 10px 0;
       span {
         color: #8b43ff;
-        background: linear-gradient(270deg, rgba(139,67,255,1) 0%, rgba(81,50,131,1) 100%);
+        background: linear-gradient(to left, var(--main-color) 0%, var(--second-color) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -28,7 +28,7 @@ section {
       cursor: pointer;
 
       transition: all 0.3s ease-out;
-      background: linear-gradient(to right,#8b43ff 0% , #6a25da 50%, white 50%) right bottom;
+        background: linear-gradient(to right,var(--main-color) 0% , var(--second-color) 50%, white 50%) right bottom;
       background-size: 200% 100%;
       font-weight: 700;
       &:hover {
